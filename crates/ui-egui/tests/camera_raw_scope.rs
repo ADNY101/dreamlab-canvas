@@ -4,15 +4,7 @@ use egui::{Event, Modifiers, PointerButton, Pos2, Rect, pos2, vec2};
 use egui_kittest::{Harness, kittest::Queryable};
 use serde_json::{Value, json};
 
-/// Concurrent wgpu instances in one process crash on some drivers (see `canvas_16f.rs`). With the
-/// NVIDIA and lavapipe Vulkan drivers both installed, `wgpu::Instance::new` on several test
-/// threads segfaults inside libvulkan, so every test that builds a GPU harness holds this lock for
-/// its whole run, harness included.
-static GPU_LOCK: std::sync::Mutex<()> = std::sync::Mutex::new(());
-
-fn gpu_lock() -> std::sync::MutexGuard<'static, ()> {
-    GPU_LOCK.lock().unwrap_or_else(std::sync::PoisonError::into_inner)
-}
+use dreamlab_canvas_testkit::gpu_lock;
 
 fn menu(app: &mut DreamLabCanvasApp, ctx: &egui::Context, p: Value) -> Result<Value, String> {
     camera_raw_ui::menu(app, ctx, "filter.cameraRaw", &p).ok_or("missing handler")?

@@ -84,6 +84,9 @@ pub struct DocM {
     /// Window › Timeline.
     #[serde(default)]
     pub timeline: Option<dreamlab_canvas_doc::Timeline>,
+    /// The JPEG quality / WebP encoding File › Save reuses.
+    #[serde(default, skip_serializing_if = "dreamlab_canvas_doc::FileEncoding::is_empty")]
+    pub file_encoding: dreamlab_canvas_doc::FileEncoding,
     /// Image › Analysis: measurement scale, count groups, ruler.
     #[serde(default)]
     pub measurement: dreamlab_canvas_doc::Measurement,

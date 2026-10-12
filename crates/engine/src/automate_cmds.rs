@@ -324,9 +324,11 @@ fn write_shim(droplet: &str) -> Result<String> {
     let abs = std::fs::canonicalize(droplet).map(|p| p.to_string_lossy().into_owned()).unwrap_or_else(|_| droplet.to_string());
     let base = abs.trim_end_matches(".pcdroplet").trim_end_matches(".json");
     let shim = format!("{base}.command");
+    // Single quotes keep shell expansions inert; embedded quotes need to end the
+    // quoted segment, emit a literal quote, then resume it.
+    let quoted_abs = format!("'{}'", abs.replace('\'', "'\\''"));
     let body = format!(
-        "#!/bin/sh\n# DreamLab Canvas droplet: runs the action on the files given (or dropped).\nexec \"${{DREAMLAB_CANVAS_CLI:-dreamlab-canvas-cli}}\" droplet \"{}\" \"$@\"\n",
-        abs.replace('"', "\\\"")
+        "#!/bin/sh\n# DreamLab Canvas droplet: runs the action on the files given (or dropped).\nexec \"${{DREAMLAB_CANVAS_CLI:-dreamlab-canvas-cli}}\" droplet {quoted_abs} \"$@\"\n"
     );
     crate::file_cmds::write_file(&shim, body.as_bytes())?;
     #[cfg(unix)]
