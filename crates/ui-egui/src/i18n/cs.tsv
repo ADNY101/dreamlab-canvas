@@ -762,10 +762,9 @@
 	Tool Presets	Přednastavení nástrojů
 	Tools	Nástroje
 	About DreamLab Canvas	O aplikaci DreamLab Canvas
-	DreamLab Canvas Website	Web DreamLab Canvas
+	Send Feedback	Odeslat zpětnou vazbu
+	Feedback	Zpětná vazba
 	DreamLab Canvas on GitHub	DreamLab Canvas na GitHubu
-	ArtCraft Website	Web ArtCraft
-	Join the ArtCraft Discord…	Připojit se k Discordu ArtCraft…
 	Report an Issue…	Nahlásit problém…
 	WIA Support…	Podpora WIA…
 	Apply	Použít
@@ -1045,7 +1044,6 @@
 	Diffusion	Difuze
 	Discard the embedded profile (don't color manage)	Zahodit vložený profil (bez správy barev)
 	Discontiguous	Nesouvislé
-	Discord	Discord
 	Dismiss	Zavřít
 	Display P3	Display P3
 	Display Text	Zobrazený text
@@ -1177,7 +1175,6 @@
 	Invert All	Invertovat vše
 	Invert has no settings.	Invertovat nemá žádná nastavení.
 	Italic	Kurzíva
-	Join us on Discord	Přidejte se k nám na Discordu
 	Justify all	Do bloku vše
 	Justify last centered	Do bloku, poslední řádek na střed
 	Justify last left	Do bloku, poslední řádek vlevo
@@ -1586,7 +1583,6 @@
 	Apple Watch 45mm	Apple Watch 45 mm
 	Aqua	Akvamarínové
 	Art & Illustration	Umění a ilustrace
-	ArtCraft	ArtCraft
 	Background Eraser Tool	Nástroj guma pozadí
 	Bevel & Emboss	Úkos a reliéf
 	Blend Mode	Režim prolnutí
@@ -1734,7 +1730,6 @@
 	Pen Tool	Nástroj pero
 	Convert Point Tool	Nástroj převést bod
 	Photo	Fotografie
-	DreamLab Canvas website	Web DreamLab Canvas
 	Picas	Pica
 	Pillow Emboss	Polštářový reliéf
 	Pixel Replacement	Nahrazení pixelů
@@ -3427,18 +3422,11 @@ cameraRaw	Vibrance	Živost
 cameraRaw	Whites	Bílé
 layerLabel	No Color	Žádná barva
 	Loading fonts…	Načítání písem…
-	Tool	Nástroj
 	Simulate Pressure	Simulovat přítlak
-	Stroke Path…	Vytáhnout cestu…
 	Background Eraser	Guma pozadí
-	Clone Stamp	Klonovací razítko
 	Healing Brush	Retušovací štětec
 	Spot Healing Brush	Bodový retušovací štětec
-	History Brush	Štětec historie
 	Smudge	Rozmazání
-	Dodge	Zesvětlení
-	Burn	Ztmavení
-	Sponge	Houba
 # Select and Mask view modes (#1754)
 	Onion Skin	Cibulová slupka
 	Marching Ants	Pochodující mravenci
@@ -3628,7 +3616,6 @@ navigator	Zoom	Zvětšení
 	on	zapnuto
 	off	vypnuto
 	This adjustment ({key}) is kept as imported and can't be edited yet.	Tato úprava ({key}) se uchovává v importované podobě a zatím ji nelze měnit.
-	Join the ArtCraft Discord ({url})	Přidejte se na Discord ArtCraft ({url})
 	{index} of {total}	{index} z {total}
 @plural	{n} step|{n} steps	{n} krok|{n} kroky|{n} kroků
 	{shortcut} assigned.	Zkratka {shortcut} přiřazena.

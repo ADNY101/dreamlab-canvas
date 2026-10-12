@@ -1,38 +1,25 @@
 <p align="center">
-  <a href="https://getartcraft.com/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/brand/artcraft-logo-white.svg">
-      <img alt="ArtCraft" src="docs/brand/artcraft-logo.svg" width="200">
-    </picture>
-  </a>
+  <img src="assets/app-icon/dreamlab-canvas-small.svg" alt="DreamLab Canvas" width="112">
 </p>
 
 <h1 align="center">DreamLab Canvas</h1>
 
 <p align="center">
-  <b>Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust.</b><br>
+  <b>A native, open-source image editor written in pure Rust.</b><br>
   Layers, masks, adjustment layers, layer styles, type, vectors, brushes and real PSD files,<br>
-  in a native app written entirely in Rust. Open source, offline, and yours.
+  in a fast desktop app. Open source, offline, and yours.
 </p>
 
 <p align="center">
   <img alt="100% Rust" src="https://img.shields.io/badge/100%25-Rust-b7410e?style=flat-square&logo=rust">
-  <img alt="macOS · Windows · Linux · FreeBSD · Web" src="https://img.shields.io/badge/macOS%20%C2%B7%20Windows%20%C2%B7%20Linux%20%C2%B7%20FreeBSD%20%C2%B7%20Web-native-2f7bf5?style=flat-square">
-  <img alt="License: MIT OR Apache-2.0" src="https://img.shields.io/badge/license-MIT%20%2F%20Apache--2.0-3a3a3a?style=flat-square">
-  <img alt="Status: early alpha" src="https://img.shields.io/badge/status-early%20alpha-d69e2e?style=flat-square">
+  <img alt="License: MIT OR Apache-2.0" src="https://img.shields.io/badge/license-MIT%20%2F%20Apache--2.0-7c3aed?style=flat-square">
+  <img alt="Status: early alpha" src="https://img.shields.io/badge/status-early%20alpha-db2777?style=flat-square">
 </p>
 
-<p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues"><img alt="Join the ArtCraft community on Discord" src="https://img.shields.io/badge/Join%20us%20on%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="40"></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas"><b>DreamLab Canvas on getartcraft.com</b></a> ·
-  <a href="https://getartcraft.com/">ArtCraft</a> ·
-  <a href="https://getartcraft.com/apps">All Crafting Apps</a>
-</p>
-
-<br>
+> [!NOTE]
+> DreamLab Canvas is based on [PhotoCraft](https://github.com/storytold/photocraft) by the ArtCraft
+> team (MIT OR Apache-2.0). It is an independent fork and is not made, sponsored or endorsed by them.
+> Sibling project: **DreamLab PDF**.
 
 <p align="center">
   <img src="docs/images/dreamlab-canvas-demo.jpg" alt="DreamLab Canvas editing Hokusai's The Great Wave: a caption card with a drop shadow, Title and Credit type layers, Vibrance and Curves adjustment layers, and the Curves editor drawn over the image's histogram" width="100%">
@@ -41,10 +28,6 @@
   <i>The Great Wave off Kanagawa</i>, Katsushika Hokusai, c. 1831</sub>
 </p>
 
-> [!NOTE]
-> **ArtCraft is a community of artists from all walks of life.** Digital, generative, music,
-> games &mdash; if you make things, you're one of us. **[Come say hi on Discord](https://github.com/mad10188/dreamlab-canvas/issues).**
-
 <p align="center">
   <a href="#features">Features</a> ·
   <a href="#everything-in-the-box">Everything in the box</a> ·
@@ -52,10 +35,9 @@
   <a href="#built-for-agents">Agents</a> ·
   <a href="#under-the-hood">Under the hood</a> ·
   <a href="#get-started">Get started</a> ·
-  <a href="#downloads">Downloads</a> ·
-  <a href="#the-crafting-apps">Crafting Apps</a> ·
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues">Discord</a>
+  <a href="https://github.com/mad10188/dreamlab-canvas/issues">Feedback</a>
 </p>
+
 
 <br>
 
@@ -313,123 +295,42 @@ Security architecture, threat modeling, parser hardening, fuzzing, and vulnerabi
 ## Test corpora
 
 DreamLab Canvas is tested against real files: our own Photoshop-authored oracle PSDs in
-[dreamlab-canvas-corpus](https://github.com/storytold/photocraft-corpus) plus the psd-tools, ag-psd and PngSuite sets, pinned and
+[photocraft-corpus](https://github.com/storytold/photocraft-corpus) (upstream PhotoCraft's) plus the psd-tools, ag-psd and PngSuite sets, pinned and
 sha256-verified. Fetch them with `cargo xtask corpus --all` and run the tests with
 `cargo xtask test-corpus` (details in [docs/development.md](docs/development.md#test-corpora)).
 
-## Downloads
+## Installing
 
-**New to DreamLab Canvas?** Download it from the [DreamLab Canvas page on getartcraft.com](https://github.com/mad10188/dreamlab-canvas). That's the easiest way to install it.
+There are no prebuilt downloads yet: build from source with the steps in [Get started](#get-started)
+(`cargo build --release -p dreamlab-canvas`, then run `target/release/dreamlab-canvas`). Packaging
+scripts for every platform (MSI, DMG, AppImage, Flatpak, `.deb`, `.rpm`, FreeBSD, web) are in
+[`packaging/`](packaging/).
 
-**Want a specific build or format?** On GitHub, the [latest release](https://github.com/mad10188/dreamlab-canvas/releases/latest) has every build listed below, and [all releases](https://github.com/mad10188/dreamlab-canvas/releases) has earlier versions and their notes. `<ver>` in the file names is the version number, and `SHA256SUMS.txt` lists a checksum for every file.
+Bugs and ideas: [open an issue](https://github.com/mad10188/dreamlab-canvas/issues).
 
-### Windows
+### Windows installer and portable zip
 
-| Build | Installer | Portable |
-|---|---|---|
-| x64 (64-bit Intel/AMD) | `dreamlab-canvas-<ver>-windows-x64.msi` | `dreamlab-canvas-<ver>-windows-x64-portable.zip` |
-| arm64 (Snapdragon and other ARM PCs) | `dreamlab-canvas-<ver>-windows-arm64.msi` | `dreamlab-canvas-<ver>-windows-arm64-portable.zip` |
-| x86 (32-bit) | `dreamlab-canvas-<ver>-windows-x86.msi` | `dreamlab-canvas-<ver>-windows-x86-portable.zip` |
-
-Installers and executables are code-signed.
-
-### macOS
-
-| Build | File | Notes |
-|---|---|---|
-| App, universal (Apple silicon + Intel) | `dreamlab-canvas-<ver>-macos-universal.dmg` | Signed and notarized |
-| Command-line tool, universal | `dreamlab-canvas-cli-<ver>-macos-universal.zip` | Signed and notarized |
-
-### Linux
-
-| Format | x86_64 | aarch64 (ARM64) | Notes |
-|---|---|---|---|
-| AppImage | `dreamlab-canvas-<ver>-linux-x86_64.AppImage` | `dreamlab-canvas-<ver>-linux-aarch64.AppImage` | Runs anywhere; updates itself with [AppImageUpdate](https://github.com/AppImageCommunity/AppImageUpdate) (`.zsync` files) |
-| Flatpak | `dreamlab-canvas-<ver>-linux-x86_64.flatpak` | `dreamlab-canvas-<ver>-linux-aarch64.flatpak` | Sandboxed; `flatpak install --user <file>` |
-| Debian/Ubuntu | `dreamlab-canvas-<ver>-linux-x86_64.deb` | `dreamlab-canvas-<ver>-linux-aarch64.deb` | |
-| Fedora/RHEL/openSUSE | `dreamlab-canvas-<ver>-linux-x86_64.rpm` | `dreamlab-canvas-<ver>-linux-aarch64.rpm` | |
-| Tarball | `dreamlab-canvas-<ver>-linux-x86_64.tar.gz` | `dreamlab-canvas-<ver>-linux-aarch64.tar.gz` | Unpack anywhere |
-
-RISC-V (riscv64): `dreamlab-canvas-<ver>-linux-riscv64.tar.gz` only, built against Ubuntu 24.04 (needs glibc 2.39+).
-
-### FreeBSD
-
-| Build | File |
-|---|---|
-| x86_64 | `dreamlab-canvas-<ver>-freebsd-x86_64.tar.gz` |
-
-### Web (WebAssembly)
-
-| Build | File | Notes |
-|---|---|---|
-| Static site | `dreamlab-canvas-web-<ver>.zip` | Runs in a modern browser; host it on any static server |
-
-## The Crafting Apps
-
-DreamLab Canvas is one of the **Crafting Apps**: free, open-source creative tools from the
-[ArtCraft](https://getartcraft.com/) team, each written from scratch in Rust and each able to
-stand on its own.
-
-| | App | What it's for | Code | Learn more |
-|:-:|---|---|---|---|
-| <img src="https://raw.githubusercontent.com/mad10188/dreamlab-canvas/main/assets/app-icon/hicolor/64x64/apps/com.dreamlab.canvas.png" alt="" width="32" height="32"> | **DreamLab Canvas** | **Image editing: layers, masks, type and real PSD files · you are here** | [GitHub](https://github.com/mad10188/dreamlab-canvas) | [Website](https://github.com/mad10188/dreamlab-canvas) |
-| <img src="https://raw.githubusercontent.com/storytold/vectorcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.vectorcraft.png" alt="" width="32" height="32"> | **VectorCraft** | Vector illustration | [GitHub](https://github.com/storytold/vectorcraft) | [Website](https://getartcraft.com/apps/vectorcraft) |
-| <img src="https://raw.githubusercontent.com/storytold/filmcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.filmcraft.png" alt="" width="32" height="32"> | **FilmCraft** | Video editing, color and sound | [GitHub](https://github.com/storytold/filmcraft) | [Website](https://getartcraft.com/apps/filmcraft) |
-| <img src="https://raw.githubusercontent.com/storytold/lightcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.lightcraft.png" alt="" width="32" height="32"> | **LightCraft** | Photo library and raw development | [GitHub](https://github.com/storytold/lightcraft) | [Website](https://getartcraft.com/apps/lightcraft) |
-| <img src="https://raw.githubusercontent.com/storytold/pdfcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.pdfcraft.png" alt="" width="32" height="32"> | **PdfCraft** | Reading, organizing and protecting PDFs | [GitHub](https://github.com/storytold/pdfcraft) | [Website](https://getartcraft.com/apps/pdfcraft) |
-| <img src="https://raw.githubusercontent.com/storytold/effectcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.effectcraft.png" alt="" width="32" height="32"> | **EffectCraft** | Motion graphics and visual effects | [GitHub](https://github.com/storytold/effectcraft) | [Website](https://getartcraft.com/apps/effectcraft) |
-| <img src="https://raw.githubusercontent.com/storytold/designcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.designcraft.png" alt="" width="32" height="32"> | **DesignCraft** | Page layout and publishing | [GitHub](https://github.com/storytold/designcraft) | [Website](https://getartcraft.com/apps/designcraft) |
-
-And [**ArtCraft**](https://getartcraft.com/) itself, our AI image and video studio for artists who want real control.
-
-The Crafting Apps share the same conventions: clean-room and pure Rust, native on macOS, Windows and Linux, in the browser via WebAssembly, and fully drivable by agents.
-
-<br>
-
-<p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues"><img alt="Join the ArtCraft community on Discord" src="https://img.shields.io/badge/Join%20us%20on%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="40"></a>
-</p>
-
-<h3 align="center">Come make things with us</h3>
-
-<p align="center">
-  Our Discord is where artists of every kind hang out: people who paint, shoot, draw, cut film,
-  set type, and people still figuring out what they like to make. Share what you're working on,
-  ask for help, tell us what's broken, or tell us what you wish these tools could do.
-  Whatever your medium and however long you've been at it, you're welcome here.
-</p>
-
-<p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues"><b>discord.gg/artcraft</b></a> ·
-  <a href="https://getartcraft.com/">getartcraft.com</a> ·
-  <a href="https://getartcraft.com/apps">The Crafting Apps</a> ·
-  <a href="https://github.com/mad10188/dreamlab-canvas">DreamLab Canvas</a>
-</p>
-
----
+`packaging/windows/build-setup.sh` cross-compiles DreamLab Canvas for Windows x64 from Linux
+(MinGW-w64) and writes `dist/release/dreamlab-canvas-<ver>-windows-x64-setup.exe` (NSIS): per-machine
+install, Start Menu and optional desktop shortcut, `.pcraft` documents, "Open with" for PSD/PSB and
+common image formats (defaults untouched), optional CLI on PATH, and a clean uninstaller. Silent
+install: `setup.exe /S [/NODESKTOP] [/D=C:\Path]`; silent removal: `uninstall.exe /S`. It also writes a
+portable zip of the app and the CLI as its own zip; `WITH_CLI=1` puts the CLI in setup.exe too.
 
 ## License and credits
 
-DreamLab Canvas is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE), at your option.
-Copyright (c) 2026 ArtCraft Team and the DreamLab Canvas contributors. Required notices are in [NOTICE](NOTICE).
+DreamLab Canvas is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE), at your
+option. Copyright (c) 2026 Marc Joseph and the DreamLab Canvas contributors.
 
-Bundled fonts, icons, images and other assets keep their own open licenses; each one is listed
-with its author, source and license in [ATTRIBUTION.md](ATTRIBUTION.md).
+DreamLab Canvas is a modified version of [PhotoCraft](https://github.com/storytold/photocraft),
+Copyright (c) 2026 ArtCraft Team and the PhotoCraft contributors, used under the same licenses.
+Required notices are in [NOTICE](NOTICE).
 
-Every artwork shown is in the public domain (Wikimedia Commons, NASA, U.S. National Archives); sources are listed in [`docs/images/SOURCES.md`](docs/images/SOURCES.md).
+Bundled fonts, icons, images and other assets keep their own open licenses; each one is listed with
+its author, source and license in [ATTRIBUTION.md](ATTRIBUTION.md). Screenshot artwork is public
+domain ([docs/images/SOURCES.md](docs/images/SOURCES.md)).
 
-The ArtCraft name, wordmark and logos in [`docs/brand/`](docs/brand/) are trademarks of the
-ArtCraft Team and are not covered by this license. They may be used only unmodified, and only as
-part of this repository and DreamLab Canvas, under [`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt).
-Forks and modified versions must remove them.
-
-<sub>Adobe, Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects and InDesign are trademarks or registered trademarks of Adobe Inc. in the United States and/or other countries. DreamLab Canvas is an independent, open-source project and is not affiliated with, sponsored by or endorsed by Adobe Inc.; these names are used only to describe the workflows it is compatible with.</sub>
-
-<p align="center">
-  <a href="https://getartcraft.com/"><img alt="ArtCraft" src="docs/brand/artcraft-mark.svg" width="28"></a><br>
-  <sub>Made by the <a href="https://getartcraft.com/">ArtCraft</a> team and community.</sub>
-</p>
-
-## Star history
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mad10188/dreamlab-canvas&type=Date&legend=top-left)](https://www.star-history.com/?repos=storytold%2Fdreamlab-canvas&type=date&legend=top-left)
+<sub>Adobe and Photoshop are trademarks or registered trademarks of Adobe Inc. in the United States
+and/or other countries. DreamLab Canvas is an independent, open-source project and is not affiliated
+with, sponsored by or endorsed by Adobe Inc.; these names are used only to describe compatible
+workflows and file formats.</sub>

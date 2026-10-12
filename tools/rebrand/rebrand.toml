@@ -1,0 +1,159 @@
+# DreamLab Canvas: mechanical rebrand of upstream PhotoCraft (https://github.com/storytold/photocraft).
+# Applied by tools/rebrand/rebrand.py; see tools/rebrand/README.md.
+
+skip_dirs = []
+delete = ["docs/brand"]          # ArtCraft marks: forks must remove them
+
+# Run in the rebranded tree after rebrand.py, cargo fmt and the Cargo.lock refresh.
+[post]
+commands = [
+  'DREAMLAB_CANVAS_REGEN_PROFILES=1 cargo test -q -p dreamlab-canvas-cms --release --test regen',
+]
+
+[upstream]
+repo = "https://github.com/storytold/photocraft.git"
+branch = "main"
+
+# ---- Kept verbatim: upstream history, shared test corpus, records ---------------------------
+[[protect]]
+pattern = 'storytold/photocraft(?:/issues/\d+|/issues/\{n\}|/pull/\d+|#\d+|-corpus)'
+[[protect]]
+pattern = '"repo": "storytold/photocraft"'
+files = ["contributors/contributors.json"]
+
+# ---- URLs, company and maintainer --------------------------------------------------------------
+[[text]]
+pattern = 'https://getartcraft\.com/apps/photocraft'
+replace = 'https://github.com/mad10188/dreamlab-canvas'
+[[text]]
+pattern = 'https://discord\.gg/artcraft'
+replace = 'https://github.com/mad10188/dreamlab-canvas/issues'
+[[text]]
+pattern = 'gh-releases-zsync\|storytold\|photocraft'
+replace = 'gh-releases-zsync|mad10188|dreamlab-canvas'
+[[text]]
+pattern = 'storytold/photocraft(?![\w-])'
+replace = 'mad10188/dreamlab-canvas'
+[[text]]
+pattern = 'photocraft@storyteller\.ai'
+replace = 'mad10188@users.noreply.github.com'
+[[text]]
+pattern = 'Learning Machines LLC'
+replace = 'DreamLab'
+[[text]]
+pattern = '<developer id="ai\.storyteller">'
+replace = '<developer id="com.dreamlab">'
+[[text]]                     # regex-escaped app id in workflow greps
+pattern = 'ai\\\.storyteller\\\.photocraft'
+replace = 'com\\.dreamlab\\.canvas'
+
+# ---- Windows installer: our own GUIDs ---------------------------------------------------------
+[[text]]
+pattern = '6F17BFA7-EFC8-40EA-B850-7B95ED8EA713'
+replace = '874A22E8-5BD6-4118-B970-3F8762B3674D'
+[[text]]
+pattern = 'A6DE41B7-A80F-4C59-A17E-BB68065BF67E'
+replace = 'A290A611-E831-4D3A-A692-13574E801B79'
+[[text]]
+pattern = 'D9660F32-2D0A-4ABE-B73D-17BE25F1542C'
+replace = 'C93AA682-4BCE-4C11-A1D2-67EC8BA59B66'
+
+# ---- Spots where the plain rename would break tests ---------------------------------------------
+[[text]]                     # fixed 12-byte EXIF Make field
+pattern = 'PhotoCraftCo'
+replace = 'DreamLab Inc'
+files = ["crates/codecs/tests/orientation.rs"]
+[[text]]                     # spell-check test words must stay single words
+pattern = '(?<=[" ])photocraft(?=[" ])'
+replace = 'dreamlabcanvas'
+files = ["crates/text/src/spell.rs"]
+[[text]]
+pattern = '"photocraft"'
+replace = '"dreamlabcanvas"'
+files = ["crates/engine/src/type_spell_cmds.rs"]
+[[text]]
+pattern = 'Photocraft(?=["\]])'
+replace = 'DreamLabCanvas'
+files = ["crates/engine/src/type_spell_cmds.rs"]
+[[text]]
+pattern = 'Photo Craft\.AppImage'
+replace = 'DreamLab Canvas.AppImage'
+files = ["crates/ui-egui/src/notices.rs"]
+
+# ---- Names ---------------------------------------------------------------------------------
+[[text]]
+pattern = 'ai\.storyteller\.photocraft'
+replace = 'com.dreamlab.canvas'
+[[text]]
+pattern = 'photocraft::'
+replace = 'dreamlab_canvas::'
+[[text]]
+pattern = 'photocraft_'
+replace = 'dreamlab_canvas_'
+[[text]]                     # identifiers ending in the name (run_photocraft); not Cargo's bin env vars
+pattern = '(?<!CARGO_BIN_EXE_)(?<=[A-Za-z0-9]_)photocraft\b'
+replace = 'dreamlab_canvas'
+files = ["*.rs"]
+[[text]]                     # camelCase keys: photocraftManages
+pattern = 'photocraft(?=[A-Z])'
+replace = 'dreamlabCanvas'
+[[text]]                     # glued words: photocraftcoatedcmyk
+pattern = 'photocraft(?=[a-z0-9])'
+replace = 'dreamlabcanvas'
+[[text]]
+pattern = 'photocraft'
+replace = 'dreamlab-canvas'
+[[text]]
+pattern = 'PHOTOCRAFT'
+replace = 'DREAMLAB_CANVAS'
+[[text]]                     # Windows ProgIDs: no spaces
+pattern = 'Photocraft\.(?=[A-Z])'
+replace = 'DreamLabCanvas.'
+[[text]]
+pattern = 'Photocraft(?=[A-Z])'
+replace = 'DreamLabCanvas'
+[[text]]
+pattern = 'Photocraft'
+replace = 'DreamLab Canvas'
+[[text]]
+pattern = 'PhotoCraft(?=[A-Z_])'
+replace = 'DreamLabCanvas'
+[[text]]                     # inflected: PhotoCraftu -> DreamLab Canvasu
+pattern = 'PhotoCraft(?=[^\W\d_])'
+replace = 'DreamLab Canvas'
+[[text]]
+pattern = 'PhotoCraft'
+replace = 'DreamLab Canvas'
+
+# ---- Fix-ups ------------------------------------------------------------------------------------
+[[text]]                     # log targets are module paths: underscores
+pattern = '(?<=["`,])dreamlab-canvas(?=[*=":])'
+replace = 'dreamlab_canvas'
+files = ["apps/photocraft/src/logging.rs"]
+[[text]]
+pattern = '`dreamlab-canvas\*=debug`'
+replace = '`dreamlab_canvas*=debug`'
+files = ["docs/development.md", "apps/photocraft/src/logging.rs"]
+
+# ---- File and directory names ------------------------------------------------------------------
+[[path]]
+pattern = 'ai\.storyteller\.photocraft'
+replace = 'com.dreamlab.canvas'
+[[path]]
+pattern = 'photocraft'
+replace = 'dreamlab-canvas'
+[[path]]
+pattern = 'PhotoCraft'
+replace = 'DreamLab Canvas'
+
+[check]
+leftover = ['(?i)photo.?craft', '(?i)artcraft', '(?i)discord\.gg', '(?i)storyteller', '(?i)learning machines']
+allow = [
+  'storytold/photocraft', 'PhotoCraft by the ArtCraft', 'PhotoCraft contributors', 'version of PhotoCraft',
+  'based on PhotoCraft', 'fork of PhotoCraft', 'upstream PhotoCraft', 'of PhotoCraft', 'PhotoCraft \(https',
+  '\[PhotoCraft\]', 'ArtCraft (name|Team|team)', 'the ArtCraft', 'craft-fonts', 'craft-libs',
+  'craft-common-actions', 'ArtCraft brand', 'ArtCraft marks', 'photocraft-corpus', 'PhotoCraft brand terms',
+  'Product (and technology )?names', 'product names and technology names',
+  'ArtCraft, OpenType', 'DreamLab Canvas, ArtCraft',
+]
+allow_files = ["ATTRIBUTION.md", "tools/rebrand/*"]

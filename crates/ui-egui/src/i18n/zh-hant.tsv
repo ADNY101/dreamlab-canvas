@@ -762,10 +762,9 @@
 	Tool Presets	工具預設集
 	Tools	工具
 	About DreamLab Canvas	關於 DreamLab Canvas
-	DreamLab Canvas Website	DreamLab Canvas 網站
+	Send Feedback	傳送意見回饋
+	Feedback	意見回饋
 	DreamLab Canvas on GitHub	GitHub 上的 DreamLab Canvas
-	ArtCraft Website	ArtCraft 網站
-	Join the ArtCraft Discord…	加入 ArtCraft Discord…
 	Report an Issue…	回報問題…
 	WIA Support…	WIA 支援…
 	Apply	套用
@@ -1036,7 +1035,6 @@
 	Diffusion	擴散
 	Discard the embedded profile (don't color manage)	捨棄嵌入的描述檔 (不進行色彩管理)
 	Discontiguous	不連續
-	Discord	Discord
 	Dismiss	關閉
 	Display P3	Display P3
 	Display Text	顯示文字
@@ -1168,7 +1166,6 @@
 	Invert All	全部反轉
 	Invert has no settings.	負片效果沒有設定。
 	Italic	斜體
-	Join us on Discord	加入我們的 Discord
 	Justify all	全部齊行
 	Justify last centered	最後一行置中齊行
 	Justify last left	最後一行靠左齊行
@@ -1575,7 +1572,6 @@
 	Apple Watch 45mm	Apple Watch 45mm
 	Aqua	水藍色
 	Art & Illustration	藝術與插畫
-	ArtCraft	ArtCraft
 	Background Eraser Tool	背景橡皮擦工具
 	Bevel & Emboss	斜角和浮雕
 	Blend Mode	混合模式
@@ -1724,7 +1720,6 @@
 	Pen Tool	筆型工具
 	Convert Point Tool	轉換錨點工具
 	Photo	相片
-	DreamLab Canvas website	DreamLab Canvas 網站
 	Picas	派卡
 	Pillow Emboss	枕狀浮雕
 	Pixel Replacement	像素取代

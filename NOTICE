@@ -1,11 +1,13 @@
 DreamLab Canvas
-Copyright (c) 2026 ArtCraft Team and the DreamLab Canvas contributors.
+Copyright (c) 2026 Marc Joseph and the DreamLab Canvas contributors.
 Licensed under the MIT License or the Apache License, Version 2.0, at your option
 (LICENSE-MIT, LICENSE-APACHE).
 
-The ArtCraft name, wordmark and logos in docs/brand/ are trademarks of the ArtCraft Team. They are
-not open source and are not covered by the license above; their terms are in
-docs/brand/LICENSE-brand.txt.
+DreamLab Canvas is a modified version of PhotoCraft (https://github.com/storytold/photocraft),
+Copyright (c) 2026 ArtCraft Team and the PhotoCraft contributors, licensed under the MIT License or
+the Apache License, Version 2.0. DreamLab Canvas is not made, sponsored or endorsed by the ArtCraft
+Team; the ArtCraft name, wordmark and logos have been removed from it as the PhotoCraft brand terms
+require.
 
 Third-party material
 

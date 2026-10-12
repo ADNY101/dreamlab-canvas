@@ -1,6 +1,6 @@
 # Credits
 
-DreamLab Canvas is created and maintained by the ArtCraft team and DreamLab Canvas contributors. Project ownership, copyright, and licensing remain as stated in the repository's `README.md`, `NOTICE`, and license files. Every merged contribution is credited in the repository history and release notes.
+DreamLab Canvas is maintained by Marc Joseph and the DreamLab Canvas contributors. It is a fork of PhotoCraft, created by the ArtCraft team and the PhotoCraft contributors, whose work is credited below and in the repository history. Project ownership, copyright, and licensing remain as stated in the repository's `README.md`, `NOTICE`, and license files. Every merged contribution is credited in the repository history and release notes.
 
 ## Documentation
 

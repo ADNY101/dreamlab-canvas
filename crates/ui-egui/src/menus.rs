@@ -91,9 +91,6 @@ pub const UI_COMMANDS: &[(&str, &str, &[&str], Option<&str>)] = &[
     ("window.theme.breezeDark", "Breeze Dark Theme", &["Window", "Theme"], None),
     ("window.theme.system", "Sync with system", &["Window", "Theme"], None),
     ("edit.search", "Search…", &["Edit"], Some("Cmd+F")),
-    ("help.discord", "Join the ArtCraft Discord…", &["Help"], None),
-    ("help.website", "DreamLab Canvas Website", &["Help"], None),
-    ("help.artcraftWebsite", "ArtCraft Website", &["Help"], None),
     ("help.github", "DreamLab Canvas on GitHub", &["Help"], None),
     ("help.reportIssue", "Report an Issue…", &["Help"], None),
     ("help.systemInfo", "System Info…", &["Help"], None),
@@ -179,7 +176,7 @@ pub(crate) fn invoke_unguarded(app: &mut DreamLabCanvasApp, ctx: &egui::Context,
     if let Some(result) = crate::panel_docking::command(app, id, &params) {
         return result;
     }
-    // Help › Discord, website, GitHub, Report an Issue.
+    // Help › GitHub, Report an Issue.
     if let Some(url) = crate::links::url_for(id) {
         return Ok(crate::links::open(app, ctx, url));
     }

@@ -587,7 +587,7 @@ pub fn title_bar(app: &mut DreamLabCanvasApp, ui: &mut egui::Ui) {
                         ("Pixel Art".to_string(), tl!("Pixel Art")),
                         ("Motion".to_string(), tl!("Motion")),
                     ];
-                    // A narrow bar drops what is also in a menu, Discord first (below), then
+                    // A narrow bar drops what is also in a menu, Feedback first (below), then
                     // the theme toggle (Preferences), then search (Edit › Search), and narrows
                     // the switcher (Window › Workspace) before anything runs over.
                     let room = ui.available_width();
@@ -621,23 +621,16 @@ pub fn title_bar(app: &mut DreamLabCanvasApp, ui: &mut egui::Ui) {
                         }
                         button.context_menu(|ui| crate::prefs_ui::appearance_context_menu(app, ui));
                     }
-                    // The community Discord, one click away while the bar has room for it
-                    // (narrow windows drop it first; it is also Help › Discord).
-                    if ui.available_width() >= DISCORD_ROOM {
-                        let discord = egui::Button::image_and_text(
+                    // Feedback, one click away while the bar has room for it
+                    // (narrow windows drop it first; it is also Help › Report an Issue).
+                    if ui.available_width() >= FEEDBACK_ROOM {
+                        let feedback = egui::Button::image_and_text(
                             icons::image("message-square", 14.0, t.text_dim),
-                            egui::RichText::new(tl!("Discord")).color(t.text_dim).size(12.0),
+                            egui::RichText::new(tl!("Feedback")).color(t.text_dim).size(12.0),
                         )
                         .frame(false);
-                        if ui
-                            .add(discord)
-                            .on_hover_text({
-                                let template = "Join the ArtCraft Discord ({url})";
-                                crate::i18n::fmt(tl!(template), &[("url", crate::links::DISCORD)])
-                            })
-                            .clicked()
-                        {
-                            crate::links::open(app, ui.ctx(), crate::links::DISCORD);
+                        if ui.add(feedback).on_hover_text(crate::links::FEEDBACK).clicked() {
+                            crate::links::open(app, ui.ctx(), crate::links::FEEDBACK);
                         }
                     }
                     if rtl { ui.min_rect().right() } else { ui.min_rect().left() }
@@ -699,8 +692,8 @@ pub fn sync_window_title(app: &mut DreamLabCanvasApp, ctx: &egui::Context) {
 
 /// Minimum space kept between the window title and the menus or controls beside it.
 const TITLE_GAP: f32 = 16.0;
-/// Free room the title bar needs after its other controls to show the Discord button.
-const DISCORD_ROOM: f32 = 120.0;
+/// Free room the title bar needs after its other controls to show the Feedback button.
+const FEEDBACK_ROOM: f32 = 120.0;
 /// The workspace switcher's narrowest width, and one 28 pt title-bar icon with its spacing.
 const WORKSPACE_MIN: f32 = 90.0;
 const ICON_SLOT: f32 = 34.0;

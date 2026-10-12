@@ -1,35 +1,33 @@
 # DreamLab Canvas app icon
 
-A **nine-tailed kitsune with a brow diamond**: an engraving portrait, seated, looking back at the
-viewer, in the Crafting Apps' owl-template framing (full-bleed field, head and body filling the
-tile, tails running off the edges).
+A **photo card with moonlit mountains**: a white-bordered photo, tilted slightly, showing a crescent
+moon over two mountain ridges, with a sparkle at its corner. It is the image-editor sibling of the
+DreamLab PDF icon (same tile, motif and sparkle).
 
 ## Palette
 
-Exactly three colours:
-
 | Colour | Hex | Used for |
 |---|---|---|
-| Ink | `#0b0b0c` | line work and contours |
-| Paper | `#efe9dc` | the figure |
-| DreamLab Canvas blue (app colour) | `#2f7bf5` | the full-bleed field |
+| Violet → pink | `#4c1d95` → `#db2777` | the tile gradient |
+| Indigo → violet | `#312e81` → `#7c3aed` | the photo's sky |
+| Paper | `#f8f7ff` | the photo border |
+| Lilac | `#c4b5fd`, `#a78bfa` | the mountains |
+| Gold | `#fde68a` | the moon and sparkle |
 
 ## Geometry
 
 A 512-unit tile (`viewBox="0 0 512 512"`), rounded square with `rx=112`, no border. The macOS
 renders pad it onto Apple's 824/1024 icon grid; the Windows and Linux renders crop 22 units off
-each side so the figure reads at 16–48 px.
+each side so the motif reads at 16–48 px.
 
 ## Provenance
 
-The owner's original drawing, made in ArtCraft (2880 px, engraving style, keyed to the palette),
-vectorised with craftrules `assets/logo-options/_tools/vectorize_tile.py`. The source PNG stays in
-craftrules at `assets/app-icons/dreamlab-canvas/source.png`. License: see `LICENSE.txt`.
+Original placeholder artwork for DreamLab Canvas, hand-written SVG. License: see `LICENSE.txt`.
 
 ## Files
 
-- `dreamlab-canvas.svg`: canonical master (traced at 2048 px).
-- `dreamlab-canvas-small.svg`: lighter trace (traced at 1024 px); also the hicolor scalable icon.
+- `dreamlab-canvas.svg`: canonical master.
+- `dreamlab-canvas-small.svg`: copy of the master; also the hicolor scalable icon.
 - `dreamlab-canvas-1024.png`: 1024 px render on the macOS grid.
 - `dreamlab-canvas.icns`: macOS bundle icon (`CFBundleIconFile`).
 - `dreamlab-canvas.ico`: Windows icon, 16–256 px, embedded in the `.exe` by `apps/dreamlab-canvas/build.rs`.
