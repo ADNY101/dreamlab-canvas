@@ -1,0 +1,17 @@
+[package]
+name = "dreamlab-canvas-paint"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+dreamlab-canvas-geom = { workspace = true }
+dreamlab-canvas-color = { workspace = true }
+dreamlab-canvas-raster = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

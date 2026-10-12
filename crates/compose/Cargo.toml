@@ -1,0 +1,27 @@
+[package]
+name = "dreamlab-canvas-compose"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+dreamlab-canvas-geom = { workspace = true }
+dreamlab-canvas-color = { workspace = true }
+dreamlab-canvas-raster = { workspace = true }
+dreamlab-canvas-doc = { workspace = true }
+dreamlab-canvas-vector = { workspace = true }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+rayon = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+criterion = { workspace = true }
+dreamlab-canvas-paint = { workspace = true }
+
+[[bench]]
+name = "compose"
+harness = false

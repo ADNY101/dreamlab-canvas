@@ -1,0 +1,24 @@
+DreamLab Canvas's Korean, German, Brazilian Portuguese, Italian, Ukrainian, Dutch and Czech UI translation catalogs are
+licensed under MIT OR Apache-2.0, at your option. The full license texts are in ../../../../LICENSE-MIT
+and ../../../../LICENSE-APACHE.
+
+Korean translations: DreamLab Canvas contributors, original translations of
+DreamLab Canvas's English labels; no proprietary translation resources were used.
+
+German translations: DreamLab Canvas contributors, original translations of
+DreamLab Canvas's English labels; no proprietary translation resources were used.
+
+Brazilian Portuguese translations: DreamLab Canvas contributors, original translations of
+DreamLab Canvas's English labels; no proprietary translation resources were used.
+
+Italian translations: DreamLab Canvas contributors, original translations of
+DreamLab Canvas's English labels; no proprietary translation resources were used.
+
+Ukrainian translations: DreamLab Canvas contributors, original translations of
+DreamLab Canvas's English labels; no proprietary translation resources were used.
+
+Dutch translations: DreamLab Canvas contributors, original translations of
+DreamLab Canvas's English labels; no proprietary translation resources were used.
+
+Czech translations: DreamLab Canvas contributors, original translations of
+DreamLab Canvas's English labels; no proprietary translation resources were used.

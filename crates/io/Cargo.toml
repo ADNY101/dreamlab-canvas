@@ -1,0 +1,56 @@
+[package]
+name = "dreamlab-canvas-io"
+description = "Import/export between dreamlab-canvas documents and PSD/PSB and flat raster formats"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+# Real-file corpus tests (opt-in; `cargo xtask test-corpus`). Fail when the corpus is missing.
+corpus = []
+# HEIC/HEIF decode (forwarded to dreamlab-canvas-codecs; see its `heif` feature).
+heif = ["dreamlab-canvas-codecs/heif"]
+
+[dependencies]
+dreamlab-canvas-geom = { workspace = true }
+dreamlab-canvas-color = { workspace = true }
+dreamlab-canvas-cms = { workspace = true }
+dreamlab-canvas-raster = { workspace = true }
+dreamlab-canvas-doc = { workspace = true }
+dreamlab-canvas-compose = { workspace = true }
+dreamlab-canvas-algo = { workspace = true }
+dreamlab-canvas-psd = { workspace = true }
+dreamlab-canvas-codecs = { workspace = true }
+dreamlab-canvas-raw = { workspace = true }
+dreamlab-canvas-affinity = { workspace = true }
+dreamlab-canvas-text = { workspace = true }
+dreamlab-canvas-paint = { workspace = true }
+dreamlab-canvas-vector = { workspace = true }
+dreamlab-canvas-format = { path = "../format" }
+thiserror = { workspace = true }
+serde_json = { workspace = true }
+blake3 = { version = "1.8", default-features = false, features = ["pure"] }
+# svg.rs inflates `.svgz` itself (with a size cap) so the XML can be checked before it is parsed;
+# pdn.rs inflates Paint.NET's gzip pixel chunks.
+flate2 = { workspace = true }
+# ora.rs reads OpenRaster's stack.xml (already in the tree through usvg).
+roxmltree = "0.20"
+# SVG import (svg.rs): usvg parses, resvg rasterises what the shape model can't hold. Both are
+# already in the tree through the UI's icon loader; text shaping needs the fonts feature set.
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+resvg = { version = "0.45", default-features = false, features = ["text", "system-fonts", "raster-images"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+resvg = { version = "0.45", default-features = false, features = ["text", "raster-images"] }
+
+[dev-dependencies]
+crc32fast = "1.5"
+dreamlab-canvas-affinity = { workspace = true, features = ["synth"] }
+flate2 = { workspace = true }
+dreamlab-canvas-psd = { workspace = true, features = ["testgen"] }
+dreamlab-canvas-raw = { workspace = true, features = ["testgen"] }
+proptest = { workspace = true }

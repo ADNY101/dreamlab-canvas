@@ -1,0 +1,48 @@
+[package]
+name = "dreamlab-canvas-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+# Real-file corpus tests (opt-in; `cargo xtask test-corpus`). Fail when the corpus is missing.
+corpus = []
+
+[dependencies]
+dreamlab-canvas-geom = { workspace = true }
+dreamlab-canvas-color = { workspace = true }
+dreamlab-canvas-cms = { workspace = true }
+dreamlab-canvas-raster = { workspace = true }
+dreamlab-canvas-doc = { workspace = true }
+dreamlab-canvas-ops = { workspace = true }
+dreamlab-canvas-compose = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rayon = { workspace = true }
+dreamlab-canvas-paint = { workspace = true }
+dreamlab-canvas-algo = { workspace = true }
+dreamlab-canvas-text = { workspace = true }
+dreamlab-canvas-vector = { workspace = true }
+dreamlab-canvas-io = { workspace = true }
+dreamlab-canvas-psd = { workspace = true }
+dreamlab-canvas-format = { workspace = true }
+dreamlab-canvas-plugins = { workspace = true }
+blake3 = { version = "1.8", default-features = false, features = ["pure"] }
+dreamlab-canvas-codecs = { workspace = true }
+flate2 = { workspace = true }
+# Photoshop `.kys` shortcut sets (`edit.keyboardShortcuts` `importKys`); already in the tree
+# through dreamlab-canvas-ui-egui and usvg.
+roxmltree = "0.20"
+
+[dev-dependencies]
+dreamlab-canvas-affinity = { workspace = true, features = ["synth"] }
+# Synthetic camera raw files for the open tests.
+dreamlab-canvas-raw = { workspace = true, features = ["testgen"] }
+# WebAssembly text -> binary for plug-in test modules (Apache-2.0 WITH LLVM-exception).
+wat = "1.228"
+# Synthetic multi-part EXR fixtures for the parts-commands tests.
+exr = { version = "1.73", default-features = false }

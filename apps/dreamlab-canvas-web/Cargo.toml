@@ -1,0 +1,42 @@
+[package]
+name = "dreamlab-canvas-web"
+description = "DreamLab Canvas in the browser (eframe web runner, WebGPU with WebGL2 fallback)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[features]
+# Open HEIC/HEIF photos (the optional dreamlab-canvas-heif crate). Not default so distributors choose
+# it; official builds (CI, packaging/, release) build with `--features heif`.
+heif = ["dreamlab-canvas-codecs/heif"]
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "dreamlab-canvas-web"
+path = "src/main.rs"
+
+[dependencies]
+dreamlab-canvas-engine = { workspace = true }
+dreamlab-canvas-io = { workspace = true }
+dreamlab-canvas-codecs = { workspace = true }
+dreamlab-canvas-doc = { workspace = true }
+dreamlab-canvas-ui-egui = { workspace = true }
+egui = { workspace = true }
+log = { workspace = true }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+# `wgpu` pulls egui-wgpu's defaults: WebGPU plus the WebGL2 fallback.
+eframe = { workspace = true, features = ["default_fonts", "wgpu", "accesskit"] }
+rfd = { workspace = true }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = ["Window", "Document", "Element", "HtmlElement", "HtmlCanvasElement", "HtmlAnchorElement", "Blob", "BlobPropertyBag", "Url", "Location", "CssStyleDeclaration", "Storage", "Event", "EventTarget", "MouseEvent", "PointerEvent", "BeforeUnloadEvent", "AbortController", "AbortSignal", "DomException", "Response", "IdbFactory", "IdbOpenDbRequest", "IdbDatabase", "IdbRequest", "IdbTransaction", "IdbTransactionMode", "IdbObjectStore", "IdbCursor", "IdbCursorWithValue", "RequestInit", "Navigator"] }
+
+[dev-dependencies]
+serde_json = { workspace = true }
+dreamlab-canvas-paint = { workspace = true }
+dreamlab-canvas-psd = { workspace = true }
