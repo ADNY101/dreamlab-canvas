@@ -6,11 +6,11 @@ use serde_json::{Value, json};
 
 use crate::DreamLabCanvasApp;
 
-pub const DISCORD: &str = "https://github.com/mad10188/dreamlab-canvas/issues";
+pub const DISCORD: &str = "https://github.com/ADNY101/dreamlab-canvas/issues";
 pub const ARTCRAFT_WEBSITE: &str = "https://getartcraft.com";
-pub const APP_PAGE: &str = "https://github.com/mad10188/dreamlab-canvas";
-pub const GITHUB: &str = "https://github.com/mad10188/dreamlab-canvas";
-pub const ISSUES: &str = "https://github.com/mad10188/dreamlab-canvas/issues";
+pub const APP_PAGE: &str = "https://github.com/ADNY101/dreamlab-canvas";
+pub const GITHUB: &str = "https://github.com/ADNY101/dreamlab-canvas";
+pub const ISSUES: &str = "https://github.com/ADNY101/dreamlab-canvas/issues";
 
 /// Help-menu link commands: (id, url). Labels live in `menus::UI_COMMANDS`.
 pub const COMMANDS: &[(&str, &str)] =
@@ -113,9 +113,9 @@ mod tests {
         let mut app = DreamLabCanvasApp::new(dreamlab_canvas_engine::Session::new(), Default::default());
         let ctx = egui::Context::default();
         for (id, url) in [
-            ("help.discord", "https://github.com/mad10188/dreamlab-canvas/issues"),
-            ("help.website", "https://github.com/mad10188/dreamlab-canvas"),
-            ("help.github", "https://github.com/mad10188/dreamlab-canvas"),
+            ("help.discord", "https://github.com/ADNY101/dreamlab-canvas/issues"),
+            ("help.website", "https://github.com/ADNY101/dreamlab-canvas"),
+            ("help.github", "https://github.com/ADNY101/dreamlab-canvas"),
         ] {
             let r = crate::menus::invoke(&mut app, &ctx, id, serde_json::json!({})).unwrap();
             assert_eq!(r["url"], url);

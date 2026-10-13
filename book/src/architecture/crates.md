@@ -22,4 +22,4 @@ Workspace applications are:
 | DreamLab Canvas CLI | `apps/dreamlab-canvas-cli` | Convert, inspect, run, batch, JSON-lines serve, and MCP |
 | DreamLab Canvas web | `apps/dreamlab-canvas-web` | The UI and engine compiled for WebAssembly |
 
-New crates must be registered in `xtask/src/layers.rs`. Nothing below `ui-egui` may depend on egui, eframe, winit, or rfd. The `psd`, `codecs`, and `cms` crates have additional independence requirements documented in [`AGENTS.md`](https://github.com/mad10188/dreamlab-canvas/blob/main/AGENTS.md).
+New crates must be registered in `xtask/src/layers.rs`. Nothing below `ui-egui` may depend on egui, eframe, winit, or rfd. The `psd`, `codecs`, and `cms` crates have additional independence requirements documented in [`AGENTS.md`](https://github.com/ADNY101/dreamlab-canvas/blob/main/AGENTS.md).

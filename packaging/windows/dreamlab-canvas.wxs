@@ -35,9 +35,9 @@
          .exe need an .exe icon identifier (ICE50), even when the source is an ICO. -->
     <Icon Id="DreamLabCanvasIcon.exe" SourceFile="$(var.IconPath)" />
     <Property Id="ARPPRODUCTICON" Value="DreamLabCanvasIcon.exe" />
-    <Property Id="ARPURLINFOABOUT" Value="https://github.com/mad10188/dreamlab-canvas" />
-    <Property Id="ARPURLUPDATEINFO" Value="https://github.com/mad10188/dreamlab-canvas" />
-    <Property Id="ARPHELPLINK" Value="https://github.com/mad10188/dreamlab-canvas/issues" />
+    <Property Id="ARPURLINFOABOUT" Value="https://github.com/ADNY101/dreamlab-canvas" />
+    <Property Id="ARPURLUPDATEINFO" Value="https://github.com/ADNY101/dreamlab-canvas" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/ADNY101/dreamlab-canvas/issues" />
 
     <StandardDirectory Id="ProgramFiles6432Folder">
       <Directory Id="INSTALLFOLDER" Name="DreamLab Canvas" />

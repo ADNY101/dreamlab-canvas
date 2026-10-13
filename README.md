@@ -23,11 +23,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues"><img alt="Join the ArtCraft community on Discord" src="https://img.shields.io/badge/Join%20us%20on%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="40"></a>
+  <a href="https://github.com/ADNY101/dreamlab-canvas/issues"><img alt="Join the ArtCraft community on Discord" src="https://img.shields.io/badge/Join%20us%20on%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="40"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas"><b>DreamLab Canvas on getartcraft.com</b></a> ·
+  <a href="https://github.com/ADNY101/dreamlab-canvas"><b>DreamLab Canvas on getartcraft.com</b></a> ·
   <a href="https://getartcraft.com/">ArtCraft</a> ·
   <a href="https://getartcraft.com/apps">All Crafting Apps</a>
 </p>
@@ -43,7 +43,7 @@
 
 > [!NOTE]
 > **ArtCraft is a community of artists from all walks of life.** Digital, generative, music,
-> games &mdash; if you make things, you're one of us. **[Come say hi on Discord](https://github.com/mad10188/dreamlab-canvas/issues).**
+> games &mdash; if you make things, you're one of us. **[Come say hi on Discord](https://github.com/ADNY101/dreamlab-canvas/issues).**
 
 <p align="center">
   <a href="#features">Features</a> ·
@@ -54,7 +54,7 @@
   <a href="#get-started">Get started</a> ·
   <a href="#downloads">Downloads</a> ·
   <a href="#the-crafting-apps">Crafting Apps</a> ·
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues">Discord</a>
+  <a href="https://github.com/ADNY101/dreamlab-canvas/issues">Discord</a>
 </p>
 
 <br>
@@ -253,7 +253,7 @@ The desktop app also offers an authenticated, loopback-only control channel (`dr
 ## Get started
 
 ```sh
-git clone https://github.com/mad10188/dreamlab-canvas
+git clone https://github.com/ADNY101/dreamlab-canvas
 cd dreamlab-canvas
 cargo run --release -p dreamlab-canvas -- image.psd   # the desktop app
 cargo test --workspace                           # the test suite
@@ -268,7 +268,7 @@ CRAFT_FONTS_DIR="$PWD/../craft-fonts" cargo run --release -p dreamlab-canvas
 
 New contributors and AI agents: start with [`AGENTS.md`](AGENTS.md), then [`docs/`](docs/).
 
-Installers for macOS, Windows, Linux, FreeBSD and the web are attached to each [GitHub release](https://github.com/mad10188/dreamlab-canvas/releases). On Linux you can pick an AppImage, a `.deb`, an `.rpm`, a tarball or a Flatpak bundle. The bundle needs the freedesktop runtime from [Flathub](https://flathub.org/setup), which `flatpak` offers to install along with it:
+Installers for macOS, Windows, Linux, FreeBSD and the web are attached to each [GitHub release](https://github.com/ADNY101/dreamlab-canvas/releases). On Linux you can pick an AppImage, a `.deb`, an `.rpm`, a tarball or a Flatpak bundle. The bundle needs the freedesktop runtime from [Flathub](https://flathub.org/setup), which `flatpak` offers to install along with it:
 
 ```sh
 flatpak install --user dreamlab-canvas-<version>-linux-x86_64.flatpak   # or -linux-aarch64
@@ -298,7 +298,7 @@ dreamlab-canvas
 Maintainers: [`docs/releasing.md`](docs/releasing.md) explains how releases are built, signed and published.
 
 > [!IMPORTANT]
-> **Status:** DreamLab Canvas is in early alpha, and we want to be straight about where it stands: much of Photoshop's feature surface exists in some form, but **it is not yet a Photoshop replacement for daily professional work**. The biggest gaps are AI/generative features, 15 missing tools, depth in typography and pro workflows, and plug-in compatibility. Every Photoshop menu item is wired to a command ([`docs/parity-checklist.md`](docs/parity-checklist.md)), but that measures wiring, not behaviour. The honest, dimension-by-dimension picture and where we're going next are in the [roadmap](ROADMAP.md) and [parity assessment](docs/target-app-parity.md). Expect rough edges, and please file issues (include your OS, document size, layer count and a screenshot). You can also tell us what broke on [Discord](https://github.com/mad10188/dreamlab-canvas/issues).
+> **Status:** DreamLab Canvas is in early alpha, and we want to be straight about where it stands: much of Photoshop's feature surface exists in some form, but **it is not yet a Photoshop replacement for daily professional work**. The biggest gaps are AI/generative features, 15 missing tools, depth in typography and pro workflows, and plug-in compatibility. Every Photoshop menu item is wired to a command ([`docs/parity-checklist.md`](docs/parity-checklist.md)), but that measures wiring, not behaviour. The honest, dimension-by-dimension picture and where we're going next are in the [roadmap](ROADMAP.md) and [parity assessment](docs/target-app-parity.md). Expect rough edges, and please file issues (include your OS, document size, layer count and a screenshot). You can also tell us what broke on [Discord](https://github.com/ADNY101/dreamlab-canvas/issues).
 
 ## Documentation
 
@@ -319,9 +319,9 @@ sha256-verified. Fetch them with `cargo xtask corpus --all` and run the tests wi
 
 ## Downloads
 
-**New to DreamLab Canvas?** Download it from the [DreamLab Canvas page on getartcraft.com](https://github.com/mad10188/dreamlab-canvas). That's the easiest way to install it.
+**New to DreamLab Canvas?** Download it from the [DreamLab Canvas page on getartcraft.com](https://github.com/ADNY101/dreamlab-canvas). That's the easiest way to install it.
 
-**Want a specific build or format?** On GitHub, the [latest release](https://github.com/mad10188/dreamlab-canvas/releases/latest) has every build listed below, and [all releases](https://github.com/mad10188/dreamlab-canvas/releases) has earlier versions and their notes. `<ver>` in the file names is the version number, and `SHA256SUMS.txt` lists a checksum for every file.
+**Want a specific build or format?** On GitHub, the [latest release](https://github.com/ADNY101/dreamlab-canvas/releases/latest) has every build listed below, and [all releases](https://github.com/ADNY101/dreamlab-canvas/releases) has earlier versions and their notes. `<ver>` in the file names is the version number, and `SHA256SUMS.txt` lists a checksum for every file.
 
 ### Windows
 
@@ -372,7 +372,7 @@ stand on its own.
 
 | | App | What it's for | Code | Learn more |
 |:-:|---|---|---|---|
-| <img src="https://raw.githubusercontent.com/mad10188/dreamlab-canvas/main/assets/app-icon/hicolor/64x64/apps/com.dreamlab.canvas.png" alt="" width="32" height="32"> | **DreamLab Canvas** | **Image editing: layers, masks, type and real PSD files · you are here** | [GitHub](https://github.com/mad10188/dreamlab-canvas) | [Website](https://github.com/mad10188/dreamlab-canvas) |
+| <img src="https://raw.githubusercontent.com/ADNY101/dreamlab-canvas/main/assets/app-icon/hicolor/64x64/apps/com.dreamlab.canvas.png" alt="" width="32" height="32"> | **DreamLab Canvas** | **Image editing: layers, masks, type and real PSD files · you are here** | [GitHub](https://github.com/ADNY101/dreamlab-canvas) | [Website](https://github.com/ADNY101/dreamlab-canvas) |
 | <img src="https://raw.githubusercontent.com/storytold/vectorcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.vectorcraft.png" alt="" width="32" height="32"> | **VectorCraft** | Vector illustration | [GitHub](https://github.com/storytold/vectorcraft) | [Website](https://getartcraft.com/apps/vectorcraft) |
 | <img src="https://raw.githubusercontent.com/storytold/filmcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.filmcraft.png" alt="" width="32" height="32"> | **FilmCraft** | Video editing, color and sound | [GitHub](https://github.com/storytold/filmcraft) | [Website](https://getartcraft.com/apps/filmcraft) |
 | <img src="https://raw.githubusercontent.com/storytold/lightcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.lightcraft.png" alt="" width="32" height="32"> | **LightCraft** | Photo library and raw development | [GitHub](https://github.com/storytold/lightcraft) | [Website](https://getartcraft.com/apps/lightcraft) |
@@ -387,7 +387,7 @@ The Crafting Apps share the same conventions: clean-room and pure Rust, native o
 <br>
 
 <p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues"><img alt="Join the ArtCraft community on Discord" src="https://img.shields.io/badge/Join%20us%20on%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="40"></a>
+  <a href="https://github.com/ADNY101/dreamlab-canvas/issues"><img alt="Join the ArtCraft community on Discord" src="https://img.shields.io/badge/Join%20us%20on%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="40"></a>
 </p>
 
 <h3 align="center">Come make things with us</h3>
@@ -400,10 +400,10 @@ The Crafting Apps share the same conventions: clean-room and pure Rust, native o
 </p>
 
 <p align="center">
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues"><b>discord.gg/artcraft</b></a> ·
+  <a href="https://github.com/ADNY101/dreamlab-canvas/issues"><b>discord.gg/artcraft</b></a> ·
   <a href="https://getartcraft.com/">getartcraft.com</a> ·
   <a href="https://getartcraft.com/apps">The Crafting Apps</a> ·
-  <a href="https://github.com/mad10188/dreamlab-canvas">DreamLab Canvas</a>
+  <a href="https://github.com/ADNY101/dreamlab-canvas">DreamLab Canvas</a>
 </p>
 
 ---
@@ -432,4 +432,4 @@ Forks and modified versions must remove them.
 
 ## Star history
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mad10188/dreamlab-canvas&type=Date&legend=top-left)](https://www.star-history.com/?repos=storytold%2Fdreamlab-canvas&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=ADNY101/dreamlab-canvas&type=Date&legend=top-left)](https://www.star-history.com/?repos=storytold%2Fdreamlab-canvas&type=date&legend=top-left)

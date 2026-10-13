@@ -14,7 +14,7 @@ section: graphics
 priority: optional
 maintainer: ${DREAMLAB_CANVAS_MAINTAINER}
 vendor: DreamLab
-homepage: https://github.com/mad10188/dreamlab-canvas
+homepage: https://github.com/ADNY101/dreamlab-canvas
 license: MIT OR Apache-2.0
 description: |-
   Open-source, native image editor with familiar, professional tools.
