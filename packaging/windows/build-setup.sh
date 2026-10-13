@@ -36,7 +36,7 @@ if [ -z "${SKIP_BUILD:-}" ]; then
     export RUSTC_BOOTSTRAP=1
     extra=(-Zbuild-std=std,panic_unwind)
   fi
-  cargo build --release "${extra[@]}" --target "$TARGET" -p dreamlab-canvas -p dreamlab-canvas-cli
+  cargo build --release "${extra[@]}" --target "$TARGET" -p dreamlab-canvas -p dreamlab-canvas-cli --features dreamlab-canvas/heif
 fi
 
 BIN="$ROOT/target/$TARGET/release"
