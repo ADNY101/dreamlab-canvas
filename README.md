@@ -35,7 +35,7 @@
   <a href="#built-for-agents">Agents</a> ·
   <a href="#under-the-hood">Under the hood</a> ·
   <a href="#get-started">Get started</a> ·
-  <a href="https://github.com/mad10188/dreamlab-canvas/issues">Feedback</a>
+  <a href="https://github.com/ADNY101/dreamlab-canvas/issues">Feedback</a>
 </p>
 
 
@@ -235,7 +235,7 @@ The desktop app also offers an authenticated, loopback-only control channel (`dr
 ## Get started
 
 ```sh
-git clone https://github.com/mad10188/dreamlab-canvas
+git clone https://github.com/ADNY101/dreamlab-canvas
 cd dreamlab-canvas
 cargo run --release -p dreamlab-canvas -- image.psd   # the desktop app
 cargo test --workspace                           # the test suite
@@ -250,7 +250,7 @@ CRAFT_FONTS_DIR="$PWD/../craft-fonts" cargo run --release -p dreamlab-canvas
 
 New contributors and AI agents: start with [`AGENTS.md`](AGENTS.md), then [`docs/`](docs/).
 
-Installers for macOS, Windows, Linux, FreeBSD and the web are attached to each [GitHub release](https://github.com/mad10188/dreamlab-canvas/releases). On Linux you can pick an AppImage, a `.deb`, an `.rpm`, a tarball or a Flatpak bundle. The bundle needs the freedesktop runtime from [Flathub](https://flathub.org/setup), which `flatpak` offers to install along with it:
+Installers for macOS, Windows, Linux, FreeBSD and the web are attached to each [GitHub release](https://github.com/ADNY101/dreamlab-canvas/releases). On Linux you can pick an AppImage, a `.deb`, an `.rpm`, a tarball or a Flatpak bundle. The bundle needs the freedesktop runtime from [Flathub](https://flathub.org/setup), which `flatpak` offers to install along with it:
 
 ```sh
 flatpak install --user dreamlab-canvas-<version>-linux-x86_64.flatpak   # or -linux-aarch64
@@ -280,7 +280,7 @@ dreamlab-canvas
 Maintainers: [`docs/releasing.md`](docs/releasing.md) explains how releases are built, signed and published.
 
 > [!IMPORTANT]
-> **Status:** DreamLab Canvas is in early alpha, and we want to be straight about where it stands: much of Photoshop's feature surface exists in some form, but **it is not yet a Photoshop replacement for daily professional work**. The biggest gaps are AI/generative features, 15 missing tools, depth in typography and pro workflows, and plug-in compatibility. Every Photoshop menu item is wired to a command ([`docs/parity-checklist.md`](docs/parity-checklist.md)), but that measures wiring, not behaviour. The honest, dimension-by-dimension picture and where we're going next are in the [roadmap](ROADMAP.md) and [parity assessment](docs/target-app-parity.md). Expect rough edges, and please file issues (include your OS, document size, layer count and a screenshot). You can also tell us what broke on [Discord](https://github.com/mad10188/dreamlab-canvas/issues).
+> **Status:** DreamLab Canvas is in early alpha, and we want to be straight about where it stands: much of Photoshop's feature surface exists in some form, but **it is not yet a Photoshop replacement for daily professional work**. The biggest gaps are AI/generative features, 15 missing tools, depth in typography and pro workflows, and plug-in compatibility. Every Photoshop menu item is wired to a command ([`docs/parity-checklist.md`](docs/parity-checklist.md)), but that measures wiring, not behaviour. The honest, dimension-by-dimension picture and where we're going next are in the [roadmap](ROADMAP.md) and [parity assessment](docs/target-app-parity.md). Expect rough edges, and please file issues (include your OS, document size, layer count and a screenshot). You can also tell us what broke on [Discord](https://github.com/ADNY101/dreamlab-canvas/issues).
 
 ## Documentation
 
@@ -306,7 +306,7 @@ There are no prebuilt downloads yet: build from source with the steps in [Get st
 scripts for every platform (MSI, DMG, AppImage, Flatpak, `.deb`, `.rpm`, FreeBSD, web) are in
 [`packaging/`](packaging/).
 
-Bugs and ideas: [open an issue](https://github.com/mad10188/dreamlab-canvas/issues).
+Bugs and ideas: [open an issue](https://github.com/ADNY101/dreamlab-canvas/issues).
 
 ### Windows installer and portable zip
 

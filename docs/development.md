@@ -29,7 +29,7 @@ reinstalling Rust does not establish that the blocked executable is trusted. See
 [Smart App Control FAQ](https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions)
 for the available controls; there is no per-app exception. On a managed device, ask your
 administrator about an approved development environment. If you only want to run DreamLab Canvas,
-use the [packaged Windows release](https://github.com/mad10188/dreamlab-canvas/releases) to avoid
+use the [packaged Windows release](https://github.com/ADNY101/dreamlab-canvas/releases) to avoid
 building locally; the downloaded app is still subject to Windows application-control checks.
 
 ## Build and run

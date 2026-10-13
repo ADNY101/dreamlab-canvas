@@ -1,6 +1,6 @@
 # Release security
 
-DreamLab Canvas's release workflow builds platform packages and a draft GitHub Release from the `release` branch. The authoritative process is [`docs/releasing.md`](https://github.com/mad10188/dreamlab-canvas/blob/main/docs/releasing.md).
+DreamLab Canvas's release workflow builds platform packages and a draft GitHub Release from the `release` branch. The authoritative process is [`docs/releasing.md`](https://github.com/ADNY101/dreamlab-canvas/blob/main/docs/releasing.md).
 
 ## Implemented workflow elements
 

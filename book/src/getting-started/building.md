@@ -3,7 +3,7 @@
 DreamLab Canvas uses the Rust workspace at the repository root. Install the stable Rust toolchain, clone the repository, and run commands from that root.
 
 On Linux, install the windowing, GL and GTK development packages first. The development guide's
-[Prerequisites](https://github.com/mad10188/dreamlab-canvas/blob/main/docs/development.md#prerequisites)
+[Prerequisites](https://github.com/ADNY101/dreamlab-canvas/blob/main/docs/development.md#prerequisites)
 list them for Debian/Ubuntu, Fedora, Arch and openSUSE.
 
 ```sh
@@ -22,7 +22,7 @@ cargo xtask layers
 cargo xtask wasm
 ```
 
-`cargo xtask wasm` requires the `wasm32-unknown-unknown` target. UI work should also be checked using the offscreen snapshot example described in the [development guide](https://github.com/mad10188/dreamlab-canvas/blob/main/docs/development.md).
+`cargo xtask wasm` requires the `wasm32-unknown-unknown` target. UI work should also be checked using the offscreen snapshot example described in the [development guide](https://github.com/ADNY101/dreamlab-canvas/blob/main/docs/development.md).
 
 ## Build the documentation
 

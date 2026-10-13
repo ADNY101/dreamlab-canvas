@@ -5,8 +5,8 @@ use serde_json::{Value, json};
 
 use crate::DreamLabCanvasApp;
 
-pub const GITHUB: &str = "https://github.com/mad10188/dreamlab-canvas";
-pub const ISSUES: &str = "https://github.com/mad10188/dreamlab-canvas/issues";
+pub const GITHUB: &str = "https://github.com/ADNY101/dreamlab-canvas";
+pub const ISSUES: &str = "https://github.com/ADNY101/dreamlab-canvas/issues";
 /// Where the Feedback buttons go: the issue tracker.
 pub const FEEDBACK: &str = ISSUES;
 
@@ -110,7 +110,7 @@ mod tests {
         let mut app = DreamLabCanvasApp::new(dreamlab_canvas_engine::Session::new(), Default::default());
         let ctx = egui::Context::default();
         for (id, url) in
-            [("help.github", "https://github.com/mad10188/dreamlab-canvas"), ("help.reportIssue", "https://github.com/mad10188/dreamlab-canvas/issues")]
+            [("help.github", "https://github.com/ADNY101/dreamlab-canvas"), ("help.reportIssue", "https://github.com/ADNY101/dreamlab-canvas/issues")]
         {
             let r = crate::menus::invoke(&mut app, &ctx, id, serde_json::json!({})).unwrap();
             assert_eq!(r["url"], url);

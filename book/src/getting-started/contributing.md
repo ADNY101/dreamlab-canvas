@@ -1,6 +1,6 @@
 # Contributing
 
-Read [`AGENTS.md`](https://github.com/mad10188/dreamlab-canvas/blob/main/AGENTS.md) and the existing [contribution guide](https://github.com/mad10188/dreamlab-canvas/blob/main/docs/contributing.md) before editing source. Those files define the clean-room policy, crate layering, command checklist, testing requirements, naming, and visual verification rules.
+Read [`AGENTS.md`](https://github.com/ADNY101/dreamlab-canvas/blob/main/AGENTS.md) and the existing [contribution guide](https://github.com/ADNY101/dreamlab-canvas/blob/main/docs/contributing.md) before editing source. Those files define the clean-room policy, crate layering, command checklist, testing requirements, naming, and visual verification rules.
 
 Important repository invariants include:
 

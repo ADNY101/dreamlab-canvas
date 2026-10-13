@@ -53,7 +53,7 @@ architecture and the PSD writer are the serial parts.
   written from Photoshop's menus; it is the denominator of the menu number. Photoshop's binary
   `Default Menus.mnu` was not parsed, so items added in 27.x that the catalog lacks would not show
   (Generative and cloud items are the likely ones).
-- User reports on GitHub (`mad10188/dreamlab-canvas`, 579 open issues on 2026-10-10) as evidence of
+- User reports on GitHub (`ADNY101/dreamlab-canvas`, 579 open issues on 2026-10-10) as evidence of
   depth and feel. Adobe's documentation and release notes for behaviour not visible in the bundle.
 
 ## Feature breadth: ~76% (weighted)

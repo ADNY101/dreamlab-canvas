@@ -2,7 +2,7 @@
 
 `dreamlab-canvas-psd` is a standalone clean-room reader and writer based on Adobe's public PSD specification. It supports PSD version 1 and PSB version 2, preserves unknown blocks for round-trip fidelity, and decodes channel data lazily.
 
-The parser accepts all four PSD compression methods handled by the crate and represents format-level structures before `dreamlab-canvas-io` maps them to `dreamlab-canvas-doc`. The current public API and fidelity behavior are documented in [`crates/psd/README.md`](https://github.com/mad10188/dreamlab-canvas/blob/main/crates/psd/README.md).
+The parser accepts all four PSD compression methods handled by the crate and represents format-level structures before `dreamlab-canvas-io` maps them to `dreamlab-canvas-doc`. The current public API and fidelity behavior are documented in [`crates/psd/README.md`](https://github.com/ADNY101/dreamlab-canvas/blob/main/crates/psd/README.md).
 
 ## Implemented parser protections
 

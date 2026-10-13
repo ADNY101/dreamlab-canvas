@@ -40,7 +40,7 @@ SetCompressor /SOLID lzma
 !define PROGID_IMG  "DreamLabCanvas.Image"
 !define UNINSTKEY   "Software\Microsoft\Windows\CurrentVersion\Uninstall\DreamLab Canvas"
 !define APPKEY      "Software\DreamLab Canvas"
-!define URL         "https://github.com/mad10188/dreamlab-canvas"
+!define URL         "https://github.com/ADNY101/dreamlab-canvas"
 
 Name "${APPNAME}"
 OutFile "${OUTFILE}"

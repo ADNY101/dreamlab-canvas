@@ -11,8 +11,8 @@ create-missing = false
 
 [output.html]
 git-repository-icon = "fa-github"
-git-repository-url = "https://github.com/mad10188/dreamlab-canvas"
-edit-url-template = "https://github.com/mad10188/dreamlab-canvas/edit/main/book/{path}"
+git-repository-url = "https://github.com/ADNY101/dreamlab-canvas"
+edit-url-template = "https://github.com/ADNY101/dreamlab-canvas/edit/main/book/{path}"
 preferred-dark-theme = "navy"
 smart-punctuation = true
 

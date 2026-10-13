@@ -18,6 +18,6 @@ cargo run -p dreamlab-canvas-ui-egui --example snapshot
 cargo test -p dreamlab-canvas-gpu
 ```
 
-Performance-sensitive work should avoid full-surface work per frame, operate per tile, skip empty tiles, and cache by revision. The current commands and benchmark entry points are listed in [`docs/development.md`](https://github.com/mad10188/dreamlab-canvas/blob/main/docs/development.md).
+Performance-sensitive work should avoid full-surface work per frame, operate per tile, skip empty tiles, and cache by revision. The current commands and benchmark entry points are listed in [`docs/development.md`](https://github.com/ADNY101/dreamlab-canvas/blob/main/docs/development.md).
 
 GPU processing is not a security sandbox. Dimensions, decoded buffers, shaders, and command parameters must be validated before resource creation or dispatch.
